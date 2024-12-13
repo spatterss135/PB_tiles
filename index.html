@@ -61,8 +61,8 @@
             layers: [osm]
         });
 
-        var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Stamen Toner": toner}
-        var overlaymaps = {"Layer": lyr}
+        var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Stamen Toner": toner};
+        var overlaymaps = {"Layer": lyr};
 
         // Title
         var title = L.control();
@@ -80,7 +80,7 @@
         L.control.layers(basemaps, overlaymaps, {collapsed: false}).addTo(map);
 
         // Fit to overlay bounds (SW and NE points with (lat, lon))
-        map.fitBounds([[43.11749854625932, -89.48313687183997], [43.12079501843564, -89.48556436211143]]);
+        // map.fitBounds([[43.11749854625932, -89.48313687183997], [43.12079501843564, -89.48556436211143]]);
 
         </script>
 
