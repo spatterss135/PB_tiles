@@ -50,13 +50,7 @@
         var toner = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.', minZoom: 15, maxZoom: 20});
 
         //  .. White background
-        
         var white = L.tileLayer("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAAA1BMVEX///+nxBvIAAAAH0lEQVQYGe3BAQ0AAADCIPunfg43YAAAAAAAAAAA5wIhAAAB9aK9BAAAAABJRU5ErkJggg==", {minZoom: 15, maxZoom: 20});
-       // .. Esri Imagery
-        var esriImagery = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: '&copy; <a href="https://www.esri.com/">Esri</a>, USGS, NOAA',
-        maxZoom: 25
-        });
 
         // Overlay layers (TMS)
         var lyr = L.tileLayer('https://benrsellers.github.io/PB_tiles/tiles/{z}/{x}/{y}.png', {tms: true, opacity: 1, attribution: "", minZoom: 15, maxZoom: 20});
@@ -70,13 +64,7 @@
             layers: [osm]
         });
 
-        var basemaps = {
-        "OpenStreetMap": osm,
-        "CartoDB Positron": cartodb,
-        "Stamen Toner": toner,
-        "Without background": white,
-        "Esri Imagery": esriImagery
-        };        
+        var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Stamen Toner": toner, "Without background": white}
         var overlaymaps = {"Layer": lyr}
 
         // Title
