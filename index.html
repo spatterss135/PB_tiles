@@ -50,7 +50,7 @@
         var toner = L.tileLayer('https://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.', minZoom: 15, maxZoom: 20});
 
         // Overlay layers (TMS)
-        var lyr = L.tileLayer('https://benrsellers.github.io/PB_tiles/tiles/{z}/{x}/{y}.png', {tms: true, opacity: 1, attribution: "", minZoom: 15, maxZoom: 20});
+        var lyr = L.tileLayer('https://benrsellers.github.io/PB_tiles/tiles/{z}/{x}/{y}.png', {opacity: 1, attribution: "", minZoom: 15, maxZoom: 20});
 
         // Map
         var map = L.map('map', {
@@ -61,7 +61,7 @@
             layers: [osm]
         });
 
-        var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Stamen Toner": toner, "Without background": white}
+        var basemaps = {"OpenStreetMap": osm, "CartoDB Positron": cartodb, "Stamen Toner": toner}
         var overlaymaps = {"Layer": lyr}
 
         // Title
