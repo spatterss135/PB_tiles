@@ -59,14 +59,14 @@
         });
 
         // Overlay layers (TMS)
-        var lyr = L.tileLayer('tiles/{z}/{x}/{y}.png', {tms: true, opacity: 1, attribution: "", minZoom: 15, maxZoom: 20});
+        var lyr = L.tileLayer('https://benrsellers.github.io/PB_tiles/tiles/{z}/{x}/{y}.png', {tms: true, opacity: 1, attribution: "", minZoom: 15, maxZoom: 20});
 
         // Map
         var map = L.map('map', {
             center: [43.119146782347485, -89.4843506169757],
             zoom: 20,
             minZoom: 15,
-            maxZoom: 25,
+            maxZoom: 20,
             layers: [osm]
         });
 
